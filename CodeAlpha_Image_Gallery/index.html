@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="branding">
+      <div class="brand">
+        <span class="brand-mark">Image</span>
+        <span class="brand-name">Gallery</span>
+      </div>
+      <p class="tagline">A small collection of places worth stopping for.</p>
+    </div>
+    <div class="dark-mode">
+      <button class="light-mode-btn active" id="light">Light</button>
+      <button class="dark-mode-btn" id="dark">Dark</button>
+    </div>
+  </header>
+
+  <nav class="filters" aria-label="Filter gallery by category">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="mountains">Mountains</button>
+    <button class="filter-btn" data-filter="ocean">Ocean</button>
+    <button class="filter-btn" data-filter="cities">Cities</button>
+    <button class="filter-btn" data-filter="forest">Forest</button>
+  </nav>
+
+  <main class="gallery" id="gallery">
+    <!-- Each figure is one photo card. Swap the src with your own images any time. -->
+    <!-- <figure class="card" data-category="mountains">
+      <img src="https://picsum.photos/id/1018/800/1000" alt="Snow-capped mountain range at dusk" loading="lazy">
+      <figcaption>Kings Canyon, Sierra Nevada</figcaption>
+    </figure>
+
+    <figure class="card" data-category="ocean">
+      <img src="https://picsum.photos/id/1076/800/1000" alt="Turquoise waves rolling onto a shoreline" loading="lazy">
+      <figcaption>Playa Blanca, Lanzarote</figcaption>
+    </figure>
+
+    <figure class="card" data-category="cities">
+      <img src="https://picsum.photos/id/1015/800/1000" alt="Narrow street between old stone buildings" loading="lazy">
+      <figcaption>Old Town, Porto</figcaption>
+    </figure>
+
+    <figure class="card" data-category="forest">
+      <img src="https://picsum.photos/id/1039/800/1000" alt="Sunlight filtering through tall pine trees" loading="lazy">
+      <figcaption>Black Forest, Germany</figcaption>
+    </figure>
+
+    <figure class="card" data-category="mountains">
+      <img src="https://picsum.photos/id/1043/800/1000" alt="Layered mountain ridges in morning mist" loading="lazy">
+      <figcaption>Annapurna Range, Nepal</figcaption>
+    </figure>
+
+    <figure class="card" data-category="ocean">
+      <img src="https://picsum.photos/id/1053/800/1000" alt="Cliffs overlooking a deep blue sea" loading="lazy">
+      <figcaption>Amalfi Coast, Italy</figcaption>
+    </figure>
+
+    <figure class="card" data-category="cities">
+      <img src="https://picsum.photos/id/1024/800/1000" alt="City skyline reflected in still water" loading="lazy">
+      <figcaption>Marina Bay, Singapore</figcaption>
+    </figure>
+
+    <figure class="card" data-category="forest">
+      <img src="https://picsum.photos/id/1025/800/1000" alt="Winding path through autumn woodland" loading="lazy">
+      <figcaption>Aokigahara, Japan</figcaption>
+    </figure>
+
+    <figure class="card" data-category="mountains">
+      <img src="https://picsum.photos/id/1036/800/1000" alt="Golden hour light on a rocky peak" loading="lazy">
+      <figcaption>Torres del Paine, Chile</figcaption>
+    </figure>
+    <figure class="card" data-category="forest">
+      <img src="https://picsum.photos/id/237/200/300" alt="Golden hour light on a rocky peak" loading="lazy">
+      <figcaption>chill dog, Chile</figcaption>
+    </figure> -->
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+    <figure class="lb-content">
+      <img id="lbImage" src="" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Next image">&#8250;</button>
+    <p class="lb-counter" id="lbCounter"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
